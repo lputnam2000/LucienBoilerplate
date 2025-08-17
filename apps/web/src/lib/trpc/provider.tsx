@@ -8,10 +8,10 @@ export function TRPCProvider({ children }: { children: React.ReactNode }) {
     const [queryClient] = useState(() => new QueryClient());
 
     return (
-        <trpc.Provider client= { trpcClient } queryClient = { queryClient } >
-            <QueryClientProvider client={ queryClient }>
-                { children }
-                </QueryClientProvider>
-                </trpc.Provider>
+        <trpc.Provider client={trpcClient} queryClient={queryClient} >
+            <QueryClientProvider client={queryClient}>
+                {children}
+            </QueryClientProvider>
+        </trpc.Provider>
     );
 }
